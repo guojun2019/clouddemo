@@ -7,6 +7,7 @@ server:
   port: 8001
 spring:
   profiles: dev
+  application:
     name: microservicecloud-config-dept-client
   datasource:
     type: com.alibaba.druid.pool.DruidDataSource
@@ -43,6 +44,7 @@ server:
   port: 8001
 spring:
   profiles: test
+  application:
     name: microservicecloud-config-dept-client
   datasource:
     type: com.alibaba.druid.pool.DruidDataSource
@@ -79,6 +81,7 @@ server:
   port: 8001
 spring:
   profiles: beta
+  application:
     name: microservicecloud-config-dept-client
   datasource:
     type: com.alibaba.druid.pool.DruidDataSource
