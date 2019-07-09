@@ -10,7 +10,7 @@ spring:
   jackson:
     time-zone: GMT+8    
   application:
-    name: microsevicecloud-provider-dept
+    name: microservicecloud-provider-dept
   datasource:
     type: com.alibaba.druid.pool.DruidDataSource
     driver-class-name: com.mysql.cj.jdbc.Driver
@@ -34,7 +34,7 @@ spring:
   jackson:
     time-zone: GMT+8    
   application:
-    name: microsevicecloud-provider-dept
+    name: microservicecloud-provider-dept
   datasource:
     type: com.alibaba.druid.pool.DruidDataSource
     driver-class-name: com.mysql.cj.jdbc.Driver
@@ -57,7 +57,7 @@ spring:
   jackson:
     time-zone: GMT+8    
   application:
-    name: microsevicecloud-provider-dept
+    name: microservicecloud-provider-dept
   datasource:
     type: com.alibaba.druid.pool.DruidDataSource
     driver-class-name: com.mysql.cj.jdbc.Driver
