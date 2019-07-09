@@ -1,0 +1,74 @@
+﻿spring:
+  profiles:
+    active:
+    - dev
+---
+server:
+  port: 8001
+spring:
+  profiles: dev
+  jackson:
+    time-zone: GMT+8    
+  application:
+    name: microsevicecloud-provider-dept
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/clouddb01?useUnicode=true&characterEncoding=utf8&useSSL=false&serverTimezone=GMT%2B8   
+    username: root
+    password: 123456
+
+
+eureka:
+  client: 
+    service-url:
+      defaultZone: http://eureka7001.com:7001/eureka
+  instance:
+    instance-id: dept-8001.com
+    prefer-ip-address: true
+---
+server:
+  port: 8001
+spring:
+  profiles: test
+  jackson:
+    time-zone: GMT+8    
+  application:
+    name: microsevicecloud-provider-dept
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/clouddb02?useUnicode=true&characterEncoding=utf8&useSSL=false&serverTimezone=GMT%2B8   
+    username: root
+    password: 123456
+
+eureka:
+  client: 
+    service-url:
+      defaultZone: http://eureka7001.com:7001/eureka
+  instance:
+    instance-id: dept-8001.com
+    prefer-ip-address: true
+---
+server:
+  port: 8001
+spring:
+  profiles: beta
+  jackson:
+    time-zone: GMT+8    
+  application:
+    name: microsevicecloud-provider-dept
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/clouddb03?useUnicode=true&characterEncoding=utf8&useSSL=false&serverTimezone=GMT%2B8   
+    username: root
+    password: 123456
+
+eureka:
+  client: 
+    service-url:
+      defaultZone: http://eureka7001.com:7001/eureka
+  instance:
+    instance-id: dept-8001.com
+    prefer-ip-address: true
